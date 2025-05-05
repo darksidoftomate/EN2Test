@@ -4,47 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EN2 - Suporte</title>
-    <style>
-        body {
-            background-color: #2C2C2C; /* Fundo preto */
-            color: #D8BFD8; /* Texto lilás */
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #FFFFFF; /* Texto branco */
-        }
-        .amo-brand {
-            display: none;
-        }
-        .styles_footer__2sTqH {
-            display: none;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="tab-link active" data-tab="chat">Live Chat</a></li>
+                <li><a href="#" class="tab-link" data-tab="form">Formulário</a></li>
+                <li><a href="#" class="tab-link" data-tab="engage">Engajamento</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>Bem-vindo ao EN2</h1>
-        <p>Estamos aqui para ajudar! Clique no botão de atendimento para falar conosco.</p>
-    </div>
+    <main>
+        <!-- Aba de Chat (padrão) -->
+        <div id="chat" class="tab-content active">
+            <div class="container">
+                <h1>Bem-vindo ao EN2</h1>
+                <p>Estamos aqui para ajudar! Clique no botão de atendimento para falar conosco.</p>
+            </div>
+        </div>
 
-    <!-- Script do botão de live chat -->
+        <!-- Aba de Formulário -->
+        <div id="form" class="tab-content">
+            <div class="container">
+                <h1>Fale Conosco</h1>
+                <p>Preencha o formulário abaixo e retornaremos em breve.</p>
+                <!-- Widget de Formulário Kommo -->
+                <div id="kommo-form-container"></div>
+            </div>
+        </div>
+
+        <!-- Aba de Engajamento -->
+        <div id="engage" class="tab-content">
+            <div class="container">
+                <h1>Conecte-se Conosco</h1>
+                <p>Siga-nos para ficar por dentro das novidades!</p>
+                <!-- Widget de Engajamento Kommo -->
+                <div id="kommo-engage-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- Script do Kommo (Live Chat) -->
     <script>
         (function(a,m,o,c,r,m){
             a[m]={id:"1032499",hash:"46a0cc00decc67dcea0fffd3108e0cecaf52439698a8ace85dcf45fbf21b48d7",locale:"pt",setMeta:function(p){this.params=(this.params||[]).concat([p])}};
@@ -56,12 +61,5 @@
             d.head&&d.head.appendChild(s);
         }(window,0,'crmPlugin',0,0,'crm_plugin'));
     </script>
-
-    <script>
-        setTimeout(() => {
-            document.querySelectorAll(".styles_footer__2sTqH").forEach(el => el.remove());
-        }, 2000);
-    </script>
-
 </body>
 </html>
