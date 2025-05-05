@@ -1,0 +1,81 @@
+/* Estilos Gerais */
+body {
+    background-color: #2C2C2C;
+    color: #D8BFD8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #1E1E1E;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #D8BFD8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3A3A3A;
+}
+
+nav ul li a.active {
+    background-color: #D8BFD8;
+    color: #2C2C2C;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+/* Abas */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Esconde elementos do Kommo */
+.amo-brand, .styles_footer__2sTqH {
+    display: none !important;
+}
