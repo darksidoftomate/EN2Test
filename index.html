@@ -7,59 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="tab-link active" data-tab="chat">Live Chat</a></li>
-                <li><a href="#" class="tab-link" data-tab="form">Formulário</a></li>
-                <li><a href="#" class="tab-link" data-tab="engage">Engajamento</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Aba de Chat (padrão) -->
-        <div id="chat" class="tab-content active">
-            <div class="container">
-                <h1>Bem-vindo ao EN2</h1>
-                <p>Estamos aqui para ajudar! Clique no botão de atendimento para falar conosco.</p>
-            </div>
+    <div class="container">
+        <h1>Bem-vindo ao EN2</h1>
+        <p>Escolha uma opção abaixo para continuar:</p>
+        
+        <!-- Botões para abrir modais -->
+        <div class="buttons">
+            <button id="open-chat" class="btn">Live Chat</button>
+            <button id="open-form" class="btn">Formulário</button>
         </div>
+    </div>
 
-        <!-- Aba de Formulário -->
-        <div id="form" class="tab-content">
-            <div class="container">
-                <h1>Fale Conosco</h1>
-                <p>Preencha o formulário abaixo e retornaremos em breve.</p>
-                <!-- Widget de Formulário Kommo -->
-                <div id="kommo-form-container"></div>
-            </div>
+    <!-- Modal do Live Chat -->
+    <div id="chat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Atendimento por Chat</h2>
+            <div id="kommo-chat-container"></div>
         </div>
+    </div>
 
-        <!-- Aba de Engajamento -->
-        <div id="engage" class="tab-content">
-            <div class="container">
-                <h1>Conecte-se Conosco</h1>
-                <p>Siga-nos para ficar por dentro das novidades!</p>
-                <!-- Widget de Engajamento Kommo -->
-                <div id="kommo-engage-container"></div>
-            </div>
+    <!-- Modal do Formulário -->
+    <div id="form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Formulário de Contato</h2>
+            <div id="kommo-form-container"></div>
         </div>
-    </main>
+    </div>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- Script do Kommo (Live Chat) -->
-    <script>
-        (function(a,m,o,c,r,m){
-            a[m]={id:"1032499",hash:"46a0cc00decc67dcea0fffd3108e0cecaf52439698a8ace85dcf45fbf21b48d7",locale:"pt",setMeta:function(p){this.params=(this.params||[]).concat([p])}};
-            a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};
-            var d=a.document,s=d.createElement('script');
-            s.async=true;
-            s.id=m+'_script';
-            s.src='https://gso.kommo.com/js/button.js';
-            d.head&&d.head.appendChild(s);
-        }(window,0,'crmPlugin',0,0,'crm_plugin'));
-    </script>
 </body>
 </html>
